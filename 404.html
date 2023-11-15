@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Formulário Avançado</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="produto">Pesquisar Produtos:</label>
+        <input list="produtos" id="produto" name="produto">
+        <datalist id="produtos">
+            <option value="Produto 1">
+            <option value="Produto 2">
+            <option value="Produto 3">
+        </datalist>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Digite apenas números" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="18" max="99">
+
+        <label for="urgencia">Nível de Urgência (1-10):</label>
+        <input type="range" id="urgencia" name="urgencia" min="1" max="10">
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento">
+
+        <label for="horario">Horário Preferencial para Receber Ligações:</label>
+        <input type="time" id="horario" name="horario">
+
+        <label for="cor">Escolha uma Cor de Tema:</label>
+        <input type="color" id="cor" name="cor">
+
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco">
+        </fieldset>
+
+        <label for="idade-output">Idade:</label>
+        <input type="number" id="idade-output" name="idade-output" min="0" max="120" oninput="outputIdade.value = idade-output.value">
+        <output id="idade-output" for="idade-output">0</output>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
